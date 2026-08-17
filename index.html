@@ -77,7 +77,6 @@
     margin: 0 auto;
     padding: 0 24px;
   }
-  /* ---------- header ---------- */
   header.site {
     padding: 28px 0 0;
   }
@@ -103,7 +102,6 @@
   }
   .listen-links a { color: var(--ink-muted); text-decoration: none; }
   .listen-links a:hover { color: var(--accent); }
-  /* ---------- hero ---------- */
   .hero {
     padding: 56px 0 64px;
   }
@@ -169,7 +167,6 @@
     .hero .wrap { grid-template-columns: 1fr; }
     .hero-cover { width: 120px; height: 120px; }
   }
-  /* ---------- about ---------- */
   section.about { padding: 8px 0 60px; }
   section.about p {
     max-width: 62ch;
@@ -177,7 +174,6 @@
     font-size: 17px;
   }
   section.about p a { word-break: break-word; }
-  /* ---------- section heading ---------- */
   .section-head {
     display: flex;
     align-items: baseline;
@@ -196,7 +192,6 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
   }
-  /* ---------- hosts ---------- */
   section.hosts {
     background: var(--bg-tint);
     border-top: 1px solid var(--border);
@@ -223,6 +218,15 @@
   }
   .host:first-child { padding-left: 0; }
   .host:last-child { padding-right: 0; text-align: right; }
+  .host-photo {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: inline-block;
+    margin: 0 0 16px;
+    border: 1px solid var(--border-strong);
+  }
   .host h3 {
     font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
     font-size: 22px;
@@ -252,7 +256,6 @@
     .hosts-grid::before { display: none; }
     .host, .host:last-child { padding: 0; text-align: left; }
   }
-  /* ---------- episodes ---------- */
   section.episodes { padding: 64px 0 80px; }
   details.season {
     border-top: 1px solid var(--border);
@@ -387,7 +390,7 @@
   </section>
   <section class="about">
     <div class="wrap">
-      <p>Запрошуємо доєднатись до телеграм каналу подкасту, де будуть доступні тести та вправи на тематику подкасту, анонси онлайн зустрічей спільноти, а також можливість поспілкуватись в чаті: <a href="https://t.me/bmvpublic" target="_blank" rel="noopener">t.me/bmvpublic</a></p>
+      <p>Запрошуємо доєднатись до телеграм каналу подкасту, де будуть доступні тести та вправи на тематику подкасту, анонси онлайн зустрічей спільноти, а також можливість поспілкуватись в чаті: <a href="https://t.me/bamanawom" target="_blank" rel="noopener">t.me/bamanawom</a></p>
     </div>
   </section>
   <section class="hosts">
@@ -397,12 +400,14 @@
       </div>
       <div class="hosts-grid">
         <div class="host">
+          <img class="host-photo" src="natalia-photo.jpg" alt="Наталія Дороган" />
           <h3 class="display">Наталія Дороган</h3>
           <p class="role">Медичний психолог</p>
           <p class="bio">Медичний психолог. 11 років у консультуванні та психотерапії, спеціалізація — групова психотерапія. Найбільше працюю з темами: тривожний розлад, співзалежні стосунки, емоційне вигоряння. Маю регулярну особисту терапію та супервізію.</p>
           <a class="ig" href="https://www.instagram.com/natalie.dorogan/" target="_blank" rel="noopener">Підпишись на Наталію →</a>
         </div>
         <div class="host">
+          <img class="host-photo" src="yevhen-photo.jpg" alt="Євген Кочубей" />
           <h3 class="display">Євген Кочубей</h3>
           <p class="role">Клінічний психолог</p>
           <p class="bio">Клінічний психолог, практикую в гештальт підході, ведучий груп і тренінгів. Спеціалізація: робота із співзалежними стосунками. Завершений курс «Екологічне ведення груп в гештальт-підході».</p>
@@ -575,7 +580,7 @@
         </summary>
         <div class="soon">
           <span class="soon-label">Незабаром</span>
-          <p style="margin:0;">Другий сезон подкасту «Між чоловіком і жінкою» готується. Слідкуйте за анонсами в <a href="https://t.me/bmvpublic" target="_blank" rel="noopener">телеграм-каналі</a>.</p>
+          <p style="margin:0;">Другий сезон подкасту «Між чоловіком і жінкою» готується. Слідкуйте за анонсами в <a href="https://t.me/bamanawom" target="_blank" rel="noopener">телеграм-каналі</a>.</p>
         </div>
       </details>
     </div>
