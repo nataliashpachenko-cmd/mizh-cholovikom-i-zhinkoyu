@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Між чоловіком і жінкою</title>
+<title>Діалоги двох психологів про стосунки</title>
 <meta name="description" content="Подкаст про стосунки, кохання і психологію пари від Наталії Дороган та Євгена Кочубея.">
 <style>
   :root {
@@ -79,6 +79,7 @@
   }
   header.site {
     padding: 28px 0 0;
+    border-bottom: 1px solid var(--border);
   }
   header.site .wrap {
     display: flex;
@@ -86,6 +87,7 @@
     justify-content: space-between;
     gap: 16px;
     flex-wrap: wrap;
+    padding-bottom: 20px;
   }
   .wordmark {
     font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
@@ -102,22 +104,34 @@
   }
   .listen-links a { color: var(--ink-muted); text-decoration: none; }
   .listen-links a:hover { color: var(--accent); }
-  .hero {
-    padding: 56px 0 64px;
+
+  section.podcast-header {
+    padding: 40px 0 0;
+    background: var(--bg);
   }
-  .hero .wrap {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 40px;
-    align-items: start;
+  section.podcast-header .wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
   }
-  .hero-cover {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border: 1px solid var(--border);
+  .podcast-header-content {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
   }
-  .kicker {
+  .podcast-icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+  }
+  .podcast-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+  .podcast-info {
+    flex: 1;
+  }
+  .podcast-label {
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -125,18 +139,37 @@
     font-weight: 600;
     margin: 0 0 10px;
   }
-  h1.title {
-    font-size: clamp(32px, 5vw, 46px);
-    line-height: 1.08;
+  .podcast-title {
+    font-size: clamp(24px, 4vw, 32px);
+    line-height: 1.2;
     margin: 0 0 12px;
     font-weight: 400;
   }
-  .byline {
+  .podcast-description {
     font-size: 15px;
     color: var(--ink-muted);
-    margin: 0 0 22px;
+    margin: 0;
+    max-width: 62ch;
+    line-height: 1.6;
   }
-  .byline b { color: var(--ink); font-weight: 600; }
+  .platform-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+  }
+  .platform-buttons .btn {
+    flex: 1;
+    min-width: 140px;
+  }
+
+  .hero {
+    padding: 0;
+  }
+  .hero .wrap {
+    display: none;
+  }
+
   .btn {
     display: inline-flex;
     align-items: center;
@@ -150,6 +183,8 @@
     border: none;
     cursor: pointer;
     transition: background 0.15s ease;
+    text-align: center;
+    justify-content: center;
   }
   .btn:hover { background: var(--accent-hover); }
   .btn.small {
@@ -163,10 +198,24 @@
     border: 1px solid var(--border-strong);
   }
   .btn.ghost:hover { background: var(--accent-tint); border-color: var(--accent); }
-  @media (max-width: 560px) {
-    .hero .wrap { grid-template-columns: 1fr; }
-    .hero-cover { width: 120px; height: 120px; }
+  @media (max-width: 640px) {
+    .podcast-header-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+    .podcast-info {
+      width: 100%;
+    }
+    .platform-buttons {
+      flex-direction: column;
+    }
+    .platform-buttons .btn {
+      width: 100%;
+    }
   }
+  
   section.about { padding: 8px 0 60px; }
   section.about p {
     max-width: 62ch;
@@ -245,16 +294,38 @@
     color: var(--ink-muted);
     margin: 0 0 16px;
   }
-  .host a.ig {
+  .host-links {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .host-links a {
     font-size: 13px;
     font-weight: 600;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: var(--accent-tint);
+    color: var(--accent);
+    transition: background 0.15s ease;
   }
-  .host a.ig:hover { text-decoration: underline; }
+  .host-links a:hover {
+    background: var(--accent);
+    color: #fff;
+  }
   @media (max-width: 620px) {
     .hosts-grid { grid-template-columns: 1fr; gap: 36px; }
     .hosts-grid::before { display: none; }
     .host, .host:last-child { padding: 0; text-align: left; }
+    .host-links {
+      justify-content: flex-start;
+    }
+    .host:last-child .host-links {
+      justify-content: flex-start;
+    }
   }
   section.episodes { padding: 64px 0 80px; }
   details.season {
@@ -376,23 +447,41 @@
     </nav>
   </div>
 </header>
-<main>
-  <section class="hero">
-    <div class="wrap">
-      <img class="hero-cover" src="https://i.scdn.co/image/ab6765630000ba8a8172c82b53e2ebd71ecc3ae2" alt="Обкладинка подкасту «Між чоловіком і жінкою»" />
-      <div>
-        <p class="kicker">Подкаст</p>
-        <h1 class="title display">Між чоловіком і жінкою</h1>
-        <p class="byline">Ведучі — <b>Євген Кочубей</b> та <b>Наталія Дороган</b></p>
-        <a class="btn" href="https://open.spotify.com/show/23JQJzgOGcF7eIvN2nIINX" target="_blank" rel="noopener">Слухати на Spotify</a>
+
+<section class="podcast-header">
+  <div class="wrap">
+    <div class="podcast-header-content">
+      <div class="podcast-icon">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+          <rect width="80" height="80" rx="12" fill="var(--bg-tint)" stroke="var(--border-strong)" stroke-width="1"/>
+          <circle cx="40" cy="30" r="6" fill="var(--accent)"/>
+          <path d="M40 38 Q35 42 33 50 M40 38 Q45 42 47 50" stroke="var(--accent)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M30 55 Q30 60 35 62 M50 55 Q50 60 45 62" stroke="var(--accent)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      
+      <div class="podcast-info">
+        <p class="podcast-label">Подкаст</p>
+        <h1 class="podcast-title display">Діалоги двох психологів про стосунки</h1>
+        <p class="podcast-description">Розмовляємо про близькість, конфлікти та гроші в парі — простою мовою, з повагою до досвіду кожного.</p>
       </div>
     </div>
-  </section>
+
+    <div class="platform-buttons">
+      <a class="btn" href="https://open.spotify.com/show/23JQJzgOGcF7eIvN2nIINX" target="_blank" rel="noopener">Spotify</a>
+      <a class="btn" href="https://podcasts.apple.com/us/podcast/між-чоловіком-і-жінкою/id1851999828" target="_blank" rel="noopener">Apple Podcasts</a>
+      <a class="btn" href="https://www.youtube.com/channel/UC6jW-d8By-5ePa2toN9DLcw" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+</section>
+
+<main>
   <section class="about">
     <div class="wrap">
       <p>Запрошуємо доєднатись до телеграм каналу подкасту, де будуть доступні тести та вправи на тематику подкасту, анонси онлайн зустрічей спільноти, а також можливість поспілкуватись в чаті: <a href="https://t.me/bamanawom" target="_blank" rel="noopener">t.me/bamanawom</a></p>
     </div>
   </section>
+
   <section class="hosts">
     <div class="wrap">
       <div class="section-head">
@@ -402,20 +491,27 @@
         <div class="host">
           <img class="host-photo" src="natalia-photo.jpg" alt="Наталія Дороган" />
           <h3 class="display">Наталія Дороган</h3>
-          <p class="role">Медичний психолог</p>
+          <p class="role">Медичний психолог, клінічний психолог</p>
           <p class="bio">Медичний психолог. 11 років у консультуванні та психотерапії, спеціалізація — групова психотерапія. Найбільше працюю з темами: тривожний розлад, співзалежні стосунки, емоційне вигоряння. Маю регулярну особисту терапію та супервізію.</p>
-          <a class="ig" href="https://www.instagram.com/natalie.dorogan/" target="_blank" rel="noopener">Підпишись на Наталію →</a>
+          <div class="host-links">
+            <a href="https://www.instagram.com/natalie.dorogan/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://nataliiadorogan.com.ua" target="_blank" rel="noopener">Сайт</a>
+          </div>
         </div>
         <div class="host">
           <img class="host-photo" src="yevhen-photo.jpg" alt="Євген Кочубей" />
           <h3 class="display">Євген Кочубей</h3>
-          <p class="role">Клінічний психолог</p>
+          <p class="role">Психотерапевт</p>
           <p class="bio">Клінічний психолог, практикую в гештальт підході, ведучий груп і тренінгів. Спеціалізація: робота із співзалежними стосунками. Завершений курс «Екологічне ведення груп в гештальт-підході».</p>
-          <a class="ig" href="https://www.instagram.com/yevhenkochubei/" target="_blank" rel="noopener">Підпишись на Євгена →</a>
+          <div class="host-links">
+            <a href="https://www.instagram.com/yevhenkochubei/" target="_blank" rel="noopener">Instagram</a>
+            <a href="#" target="_blank" rel="noopener">Сайт</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
   <section class="episodes">
     <div class="wrap">
       <div class="section-head">
@@ -586,9 +682,10 @@
     </div>
   </section>
 </main>
+
 <footer class="site">
   <div class="wrap">
-    Подкаст «Між чоловіком і жінкою» · Євген Кочубей та Наталія Дороган
+    Подкаст «Діалоги двох психологів про стосунки» · Євген Кочубей та Наталія Дороган
   </div>
 </footer>
 </body>
