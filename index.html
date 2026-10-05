@@ -19,6 +19,12 @@
     --border: #e4e1da;
     --border-strong: #d3cec2;
     --shadow: 0 1px 2px rgba(30, 36, 48, 0.04);
+    --spotify: #1DB954;
+    --spotify-hover: #1ed760;
+    --youtube: #FF0000;
+    --youtube-hover: #CC0000;
+    --apple: #FA243C;
+    --apple-hover: #D91E3B;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -34,6 +40,12 @@
       --border: #2a2f38;
       --border-strong: #3a404c;
       --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      --spotify: #1DB954;
+      --spotify-hover: #1ed760;
+      --youtube: #FF0000;
+      --youtube-hover: #CC0000;
+      --apple: #FA243C;
+      --apple-hover: #D91E3B;
     }
   }
   :root[data-theme="dark"] {
@@ -49,6 +61,12 @@
     --border: #2a2f38;
     --border-strong: #3a404c;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --spotify: #1DB954;
+    --spotify-hover: #1ed760;
+    --youtube: #FF0000;
+    --youtube-hover: #CC0000;
+    --apple: #FA243C;
+    --apple-hover: #D91E3B;
   }
   * { box-sizing: border-box; }
   body {
@@ -202,6 +220,24 @@
     border: 1px solid var(--border-strong);
   }
   .btn.ghost:hover { background: var(--accent-tint); border-color: var(--accent); }
+  .btn.spotify {
+    background: var(--spotify);
+  }
+  .btn.spotify:hover {
+    background: var(--spotify-hover);
+  }
+  .btn.youtube {
+    background: var(--youtube);
+  }
+  .btn.youtube:hover {
+    background: var(--youtube-hover);
+  }
+  .btn.apple {
+    background: var(--apple);
+  }
+  .btn.apple:hover {
+    background: var(--apple-hover);
+  }
   @media (max-width: 640px) {
     .podcast-header-content {
       flex-direction: column;
@@ -444,6 +480,10 @@
 <header class="site">
   <div class="wrap">
     <span class="wordmark">Між чоловіком і жінкою</span>
+    <div class="listen-links">
+      <a href="https://nataliiadorogan.com.ua" target="_blank" rel="noopener">Практика Наталії</a>
+      <a href="https://yevhenkochubei.com.ua" target="_blank" rel="noopener">Практика Євгена</a>
+    </div>
   </div>
 </header>
 
@@ -462,9 +502,9 @@
     </div>
 
     <div class="platform-buttons">
-      <a class="btn" href="https://open.spotify.com/show/23JQJzgOGcF7eIvN2nIINX" target="_blank" rel="noopener">Spotify</a>
-      <a class="btn" href="https://podcasts.apple.com/us/podcast/між-чоловіком-і-жінкою/id1851999828" target="_blank" rel="noopener">Apple Podcasts</a>
-      <a class="btn" href="https://www.youtube.com/channel/UC6jW-d8By-5ePa2toN9DLcw" target="_blank" rel="noopener">YouTube</a>
+      <a class="btn spotify" href="https://open.spotify.com/show/23JQJzgOGcF7eIvN2nIINX" target="_blank" rel="noopener">Spotify</a>
+      <a class="btn apple" href="https://podcasts.apple.com/us/podcast/між-чоловіком-і-жінкою/id1851999828" target="_blank" rel="noopener">Apple Podcasts</a>
+      <a class="btn youtube" href="https://www.youtube.com/channel/UC6jW-d8By-5ePa2toN9DLcw" target="_blank" rel="noopener">YouTube</a>
     </div>
   </div>
 </section>
@@ -499,7 +539,7 @@
           <p class="bio">Клінічний психолог, практикую в гештальт підході, ведучий груп і тренінгів. Спеціалізація: робота із співзалежними стосунками. Завершений курс «Екологічне ведення груп в гештальт-підході».</p>
           <div class="host-links">
             <a href="https://www.instagram.com/yevhenkochubei/" target="_blank" rel="noopener">Instagram</a>
-            <a href="#" target="_blank" rel="noopener">Сайт</a>
+            <a href="https://yevhenkochubei.com.ua" target="_blank" rel="noopener">Сайт</a>
           </div>
         </div>
       </div>
@@ -513,6 +553,32 @@
       </div>
       <details class="season" open>
         <summary class="season-summary">
+          <span>Сезон 2<span class="meta"> · 2 випуски</span></span>
+          <span class="arrow"></span>
+        </summary>
+        <div class="season-body">
+          <div class="ep">
+            <img src="https://i.scdn.co/image/ab6765630000ba8aff21c5428e5c07579468f806" alt="" />
+            <div>
+              <div class="ep-num">Випуск 2<span class="date">4 жовт.</span></div>
+              <h3>Самотність в стосунках</h3>
+              <p class="desc">Можна прожити з людиною десять років і так по-справжньому й не зустрітися. Ви поруч, у вас спільний побут, стосунки є, а всередину все одно самотньо. Говоримо про самотність у парі та як щоденне «ти як? - нормально» поступово перетворює стосунки на функцію.</p>
+            </div>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/2gtqZqKzfzeOLPC5LI0cUo" target="_blank" rel="noopener">Слухати</a>
+          </div>
+          <div class="ep">
+            <img src="https://i.scdn.co/image/ab6765630000ba8a4ecf877880c29862cfe703a9" alt="" />
+            <div>
+              <div class="ep-num">Випуск 1<span class="date">25 вер.</span></div>
+              <h3>Сміливість бути собою в стосунках</h3>
+              <p class="desc">Чому з колегами ми легко кажемо «ні» і відстоюємо своє, а з партнером замовкаємо й стримуємося? Говоримо про страх бути собою в близьких стосунках та як ми непомітно відмовляємося від себе, щоб зберегти близькість.</p>
+            </div>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/7qgGvl4gGySHCIPCuoWI0m" target="_blank" rel="noopener">Слухати</a>
+          </div>
+        </div>
+      </details>
+      <details class="season">
+        <summary class="season-summary">
           <span>Сезон 1<span class="meta"> · 16 випусків</span></span>
           <span class="arrow"></span>
         </summary>
@@ -524,7 +590,7 @@
               <h3>Стосунки в умовах хронічного стресу</h3>
               <p class="desc">Як війна змінює стосунки? У цьому випуску говоримо про вплив хронічного стресу на пару, конфлікти, прив'язаність, сексуальність, тривогу та способи зберегти емоційну близькість навіть під час війни. Практичні поради психологів для підтримки здорових стосунків у складні часи.</p>
             </div>
-            <a class="btn small listen" href="https://open.spotify.com/episode/5tFcj3xqJqdaEfekxleUEk" target="_blank" rel="noopener">Слухати</a>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/5tFcj3xqJqdaEfekxleUEk" target="_blank" rel="noopener">Слухати</a>
           </div>
           <div class="ep">
             <img src="https://i.scdn.co/image/ab6765630000ba8ae86bb1eef319d420b52083aa" alt="" />
@@ -533,7 +599,7 @@
               <h3>Жіночий аб'юз, про який соромно говорити</h3>
               <p class="desc">Чи можуть жінки бути аб'юзерками? Чому про чоловіків, які зазнають психологічного насильства, майже не говорять? У цьому випуску говоримо про жіночий аб'юз, емоційне насильство, газлайтинг, маніпуляції, ігнорування та знецінення. Розбираємо, чому чоловіки часто мовчать про такий досвід, як розпізнати токсичні стосунки та чому аб'юз не має статі.</p>
             </div>
-            <a class="btn small listen" href="https://open.spotify.com/episode/5rOnvhB6FeVeYkxnOO6tGS" target="_blank" rel="noopener">Слухати</a>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/5rOnvhB6FeVeYkxnOO6tGS" target="_blank" rel="noopener">Слухати</a>
           </div>
           <div class="ep">
             <img src="https://i.scdn.co/image/ab6765630000ba8adb315d05eb7cdb10730c00ba" alt="" />
@@ -542,7 +608,7 @@
               <h3>«Попаламщики» чи «утриманки»: де межа норми?</h3>
               <p class="desc">Хто має платити на першому побаченні? Чи повинні партнери ділити витрати 50/50? І чи вбиває фінансове питання романтику у стосунках? У цьому випуску говоримо про гроші в парі, фінансову рівність, утриманство, партнерство та те, чому конфлікти через фінанси часто руйнують стосунки.</p>
             </div>
-            <a class="btn small listen" href="https://open.spotify.com/episode/2zAQc7pJJE7XlhdmCcSRqA" target="_blank" rel="noopener">Слухати</a>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/2zAQc7pJJE7XlhdmCcSRqA" target="_blank" rel="noopener">Слухати</a>
           </div>
           <div class="ep">
             <img src="https://i.scdn.co/image/ab6765630000ba8aa269fe7606018c038102cf29" alt="" />
@@ -551,7 +617,7 @@
               <h3>Як вийти з токсичних стосунків у здорові?</h3>
               <p class="desc">Ми йдемо в стосунки і будуємо близькість тими способами, яких нас навчили. Часто це несвідомі процеси. Страх втрати, ігнорування своїх потреб... і багато іншого, що затягує нас в тенета токсичності. Говоримо у випуску про те, що може допомогти перетворити токсичність стосунків на підгрунтя для діалогу і близькості.</p>
             </div>
-            <a class="btn small listen" href="https://open.spotify.com/episode/511YqPz1gSEcyUBIgBgSr8" target="_blank" rel="noopener">Слухати</a>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/511YqPz1gSEcyUBIgBgSr8" target="_blank" rel="noopener">Слухати</a>
           </div>
           <div class="ep">
             <img src="https://i.scdn.co/image/ab6765630000ba8a5535e917a4d28f030b3513bd" alt="" />
@@ -560,7 +626,7 @@
               <h3>Чому люди роками залишаються в токсичних стосунках</h3>
               <p class="desc">Середньостатистична людина повертається до токсичного партнера сім разів, перш ніж піти остаточно. У новому випуску подкасту «Між чоловіком і жінкою» говоримо, чому так. І це не про слабкість характеру. Це про хімію мозку, дитячі травми і пастку прив'язаності, яку складно побачити зсередини.</p>
             </div>
-            <a class="btn small listen" href="https://open.spotify.com/episode/0G55XOAtaQmkLdpdA0n0sy" target="_blank" rel="noopener">Слухати</a>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/0G55XOAtaQmkLdpdA0n0sy" target="_blank" rel="noopener">Слухати</a>
           </div>
           <div class="ep">
             <img src="https://i.scdn.co/image/ab6765630000ba8a8fc26c097d0479007bb2166d" alt="" />
@@ -569,7 +635,7 @@
               <h3>Чому успішні жінки залишаються самі?</h3>
               <p class="desc">«Я все можу сама» — як незалежність руйнує близькість. Чому чоловіки не витримують сильних жінок. Конкуренція у парі замість любові. Страх близькості, контрзалежність, самооцінка. Як будувати здорові стосунки без боротьби — випуск про реальні причини самотності успішних жінок.</p>
             </div>
-            <a class="btn small listen" href="https://open.spotify.com/episode/6U7oCzejDrcnnHD1zX9g5I" target="_blank" rel="noopener">Слухати</a>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/6U7oCzejDrcnnHD1zX9g5I" target="_blank" rel="noopener">Слухати</a>
           </div>
           <div class="ep">
             <img src="https://i.scdn.co/image/ab6765630000ba8af663559f7579295a84674c08" alt="" />
@@ -578,7 +644,7 @@
               <h3>Чи бояться чоловіки сильних жінок?</h3>
               <p class="desc">Чи справді чоловіки бояться сильних жінок — чи це лише міф, який приховує глибші процеси у стосунках? У цьому випуску досліджуємо, як сила, незалежність і впевненість жінки впливають на динаміку в парі, та чому реакція чоловіків може бути такою різною. Говоримо про самооцінку, страх близькості, типи прив'язаності.</p>
             </div>
-            <a class="btn small listen" href="https://open.spotify.com/episode/7GJ4K99k9P6x7uq7CjA9Va" target="_blank" rel="noopener">Слухати</a>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/7GJ4K99k9P6x7uq7CjA9Va" target="_blank" rel="noopener">Слухати</a>
           </div>
           <div class="ep">
             <img src="https://i.scdn.co/image/ab6765630000ba8a06ffd243ba73b6df6134feeb" alt="" />
@@ -587,7 +653,7 @@
               <h3>Чому ти мене не чуєш?</h3>
               <p class="desc">Чому партнер мене не чує? Говоримо про конфлікти у стосунках, нерозуміння в парі та відчуття, що тебе не чують: чому виникають проблеми в комунікації, як чоловіки і жінки по-різному сприймають слова, що заважає нам почути одне одного і як говорити так, щоб вас розуміли.</p>
             </div>
-            <a class="btn small listen" href="https://open.spotify.com/episode/6sclJfRqYSxahDFZwnr9Hc" target="_blank" rel="noopener">Слухати</a>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/6sclJfRqYSxahDFZwnr9Hc" target="_blank" rel="noopener">Слухати</a>
           </div>
           <div class="ep">
             <img src="https://i.scdn.co/image/ab6765630000ba8aab63cbfcd063579f81a35f24" alt="" />
@@ -596,7 +662,7 @@
               <h3>Що таке «здорові стосунки»?</h3>
               <p class="desc">Що насправді означають здорові стосунки у парі? Чи правда, що у хороших стосунках люди ніколи не сваряться? Говоримо про популярні міфи, реальні критерії психологічно зрілої пари, поведінкові патерни, які руйнують стосунки, і що допомагає парам зберігати близькість і повагу.</p>
             </div>
-            <a class="btn small listen" href="https://open.spotify.com/episode/0ckD2UgUS7jMhWePLX64AB" target="_blank" rel="noopener">Слухати</a>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/0ckD2UgUS7jMhWePLX64AB" target="_blank" rel="noopener">Слухати</a>
           </div>
           <div class="ep">
             <img src="https://i.scdn.co/image/ab6765630000ba8ab83e4c67d19aeb94a1cae917" alt="" />
@@ -605,7 +671,7 @@
               <h3>Хочу побудувати стосунки, але не виходить</h3>
               <p class="desc">Якщо ти уникаєш стосунків, або твої стосунки швидко закінчуються, або ти просто відчуваєш відчай в даній темі — цей випуск для тебе. Говоримо про пошук відповіді «для чого мені стосунки», страх близькості, негативний попередній досвід і неможливість пред'являтися в стосунках собою справжнім.</p>
             </div>
-            <a class="btn small listen" href="https://open.spotify.com/episode/4HH3evkIa9Z5gvvhKZoHHV" target="_blank" rel="noopener">Слухати</a>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/4HH3evkIa9Z5gvvhKZoHHV" target="_blank" rel="noopener">Слухати</a>
           </div>
           <div class="ep">
             <img src="https://i.scdn.co/image/ab6765630000ba8a313a8a03601dd89715461c4e" alt="" />
@@ -614,7 +680,7 @@
               <h3>Як пережити розставання і не втратити себе?</h3>
               <p class="desc">Говоримо про біль після розриву, емоційну залежність, прив'язаність, депресію та тривогу після розставання: як відпустити людину, чому важко розірвати токсичні стосунки, як перестати думати про колишнього, які стратегії допомагають пережити розрив і скільки триває відновлення.</p>
             </div>
-            <a class="btn small listen" href="https://open.spotify.com/episode/1Beh3aE02EZKv2gS7Sd2rQ" target="_blank" rel="noopener">Слухати</a>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/1Beh3aE02EZKv2gS7Sd2rQ" target="_blank" rel="noopener">Слухати</a>
           </div>
           <div class="ep">
             <img src="https://i.scdn.co/image/ab6765630000ba8ae1caf74952a45c60b200a9b8" alt="" />
@@ -623,7 +689,7 @@
               <h3>Онлайн-знайомства: ринок людей чи шанс для знайомства?</h3>
               <p class="desc">Tinder, Badoo, Bumble, українські дейтинг-додатки — як змінилася культура знайомств? Говоримо про те, чому онлайн-знайомства викликають суперечки: де межа між алгоритмом і емоціями, вибором і об'єктивацією, маркетингом і справжніми почуттями. Слухай, якщо шукаєш глибину за межами свайпу.</p>
             </div>
-            <a class="btn small listen" href="https://open.spotify.com/episode/6A3Q8D0Qpp8RXT62O7HU0Y" target="_blank" rel="noopener">Слухати</a>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/6A3Q8D0Qpp8RXT62O7HU0Y" target="_blank" rel="noopener">Слухати</a>
           </div>
           <div class="ep">
             <img src="https://i.scdn.co/image/ab6765630000ba8a967dc0d2dc9d79e90c8823e6" alt="" />
@@ -632,7 +698,7 @@
               <h3>Немає часу для близькості</h3>
               <p class="desc">«Зараз не на часі», «ось закінчимо ремонт, тоді будемо ходити на побачення» — ці аргументи часто стають перепоною на шляху до емоційної близькості. Досліджуємо, як сучасний темп життя і хронічний стрес поступово віддаляють партнерів одне від одного, і що реально допомагає повертати контакт.</p>
             </div>
-            <a class="btn small listen" href="https://open.spotify.com/episode/6ApuuCjSWuxNhodG9gHDWt" target="_blank" rel="noopener">Слухати</a>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/6ApuuCjSWuxNhodG9gHDWt" target="_blank" rel="noopener">Слухати</a>
           </div>
           <div class="ep">
             <img src="https://i.scdn.co/image/ab6765630000ba8a784629158fb59b5e9b577f25" alt="" />
@@ -641,7 +707,7 @@
               <h3>Хочу піти, але не можу</h3>
               <p class="desc">Чому ми залишаємося у стосунках, які давно не приносять радості? Досліджуємо, що насправді стоїть за внутрішньою неможливістю розірвати стосунки: емоційну залежність, страх самотності, співзалежність, дитячі травми, почуття провини та соціальний тиск, а також як безпечно підготуватися до розриву.</p>
             </div>
-            <a class="btn small listen" href="https://open.spotify.com/episode/6QfigyDbLwwzBnK8SQSnGL" target="_blank" rel="noopener">Слухати</a>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/6QfigyDbLwwzBnK8SQSnGL" target="_blank" rel="noopener">Слухати</a>
           </div>
           <div class="ep">
             <img src="https://i.scdn.co/image/ab6765630000ba8ae3d1e34215860101625cd168" alt="" />
@@ -650,7 +716,7 @@
               <h3>Кохання живе три роки?</h3>
               <p class="desc">Розмова про один із найпоширеніших і найсуперечливіших міфів про стосунки: чому багато людей переконані, що любов має термін придатності. Говоримо про психологію кохання, біохімію прив'язаності та про те, чому фаза закоханості — це лише біологічний старт, а не сама любов.</p>
             </div>
-            <a class="btn small listen" href="https://open.spotify.com/episode/3dbAVgYUQBxgmP4gCbnBJH" target="_blank" rel="noopener">Слухати</a>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/3dbAVgYUQBxgmP4gCbnBJH" target="_blank" rel="noopener">Слухати</a>
           </div>
           <div class="ep">
             <img src="https://i.scdn.co/image/ab6765630000ba8a5f3bd5e51840e653e8454dcf" alt="" />
@@ -659,18 +725,8 @@
               <h3>Хто за що платить у стосунках</h3>
               <p class="desc">Хто у парі має платити за вечерю, комуналку і подорожі? Чесна розмова про гроші, владу, любов і справедливість у стосунках: сімейні сценарії, моделі бюджету і грошові характери, які формуються ще в дитинстві, та як домовлятись про витрати так, щоб ніхто не почувався винним.</p>
             </div>
-            <a class="btn small listen" href="https://open.spotify.com/episode/5Z39IYh1YEDJav5imnbOhr" target="_blank" rel="noopener">Слухати</a>
+            <a class="btn small spotify listen" href="https://open.spotify.com/episode/5Z39IYh1YEDJav5imnbOhr" target="_blank" rel="noopener">Слухати</a>
           </div>
-        </div>
-      </details>
-      <details class="season">
-        <summary class="season-summary">
-          <span>Сезон 2</span>
-          <span class="arrow"></span>
-        </summary>
-        <div class="soon">
-          <span class="soon-label">Незабаром</span>
-          <p style="margin:0;">Другий сезон подкасту «Між чоловіком і жінкою» готується. Слідкуйте за анонсами в <a href="https://t.me/bamanawom" target="_blank" rel="noopener">телеграм-каналі</a>.</p>
         </div>
       </details>
     </div>
